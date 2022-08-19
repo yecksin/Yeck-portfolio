@@ -1,6 +1,6 @@
 <div id="menu_container" class="show">
     <div class="options">
-        <div class="option" (click)="toggleOpen()" [ngStyle]="{'background-image': 'url('+option.imageBg+')'}" *ngFor="let option of this.optionsList">
+        <div class="option" [routerLink]="option.link" (click)="toggleOpen()" [ngStyle]="{'background-image': 'url('+option.imageBg+')'}" *ngFor="let option of this.optionsList">
             <div class="filter"></div>
             <div class="content">
                 <div class="title">{{option.name}}</div>
