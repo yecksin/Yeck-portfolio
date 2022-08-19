@@ -1,0 +1,98 @@
+#menu_container{
+    background-color: rgb(234, 247, 255);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 100vw;
+    top: 0;
+    transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s;
+    z-index: 2;
+    &.show{
+        position: fixed;
+        left: 0 !important;
+    }
+    .options{
+        display: flex;
+        .option{
+            width: 100%;
+            height: 100vh;
+            transition: all ease-in-out .3s;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            cursor: pointer;
+            .filter{
+                background-color: rgba(0, 0, 0, 0);
+
+                position: absolute;
+                width: 100%;
+                height: 100vh;
+            }
+            .content{
+                position: absolute;
+                top: 85vh;
+                color: white;
+                height: 100vh;
+                width: 100%;
+                transition: all ease-in-out .3s;
+                padding: 50px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                // justify-content: center;
+                flex-direction: column;
+                .title{
+                    text-align: center;
+                    font-size: 2em;
+                    font-weight: 700;
+                    text-shadow: 0px 0px 9px #000000e3;
+                    transition: all ease-in-out .3s;
+                }
+                .description{
+                    opacity: 0;
+                    transition: all ease-in-out .3s;
+                    margin-top: 30px;
+                }
+                .open_page{
+                    margin-top: 30px;
+                    color: white;
+                    padding: 6px 10px;
+                    border-radius: 10px;
+                    border: solid 2px white;
+                }
+            }
+
+            &:hover{
+                width: 150%;
+                .filter{
+                    background-color: rgba(19, 21, 29, 0.719);
+
+                }
+                .content{
+                    padding-top: 150px;
+
+                    top: 0;
+                    .title{
+                        text-shadow: 0px 0px 8px #00000000;
+                        font-size: 2.2em;
+
+                    }
+                    .description{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+.floating_button{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}

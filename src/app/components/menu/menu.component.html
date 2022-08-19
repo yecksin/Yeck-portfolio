@@ -1,0 +1,14 @@
+<div id="menu_container" class="show">
+    <div class="options">
+        <div class="option" (click)="toggleOpen()" [ngStyle]="{'background-image': 'url('+option.imageBg+')'}" *ngFor="let option of this.optionsList">
+            <div class="filter"></div>
+            <div class="content">
+                <div class="title">{{option.name}}</div>
+                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ut?</div>
+                <div class="open_page">Ir a sección</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="floating_button" (click)="toggleOpen()">floating button</button>
