@@ -22,6 +22,10 @@
             background-repeat: no-repeat;
             position: relative;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             .filter{
                 background-color: rgba(0, 0, 0, 0);
 
@@ -31,16 +35,15 @@
             }
             .content{
                 position: absolute;
-                top: 85vh;
                 color: white;
                 height: 100vh;
                 width: 100%;
                 transition: all ease-in-out .3s;
-                padding: 50px;
                 box-sizing: border-box;
+                padding: 50px;
                 display: flex;
                 align-items: center;
-                // justify-content: center;
+                justify-content: center;
                 flex-direction: column;
                 .title{
                     text-align: center;
@@ -51,7 +54,8 @@
                 }
                 .description{
                     opacity: 0;
-                    transition: all ease-in-out .3s;
+                    transition-property: opacity;
+                    transition-duration: .1s;
                     margin-top: 30px;
                 }
                 .open_page{
@@ -60,25 +64,32 @@
                     padding: 6px 10px;
                     border-radius: 10px;
                     border: solid 2px white;
+                    opacity: 0;
+                    transition-property: opacity;
+                    transition-duration: .1s;
                 }
             }
 
             &:hover{
                 width: 150%;
-                .filter{
-                    background-color: rgba(19, 21, 29, 0.719);
-
-                }
                 .content{
-                    padding-top: 150px;
+                    background-color: rgba(28, 32, 48, 0.815);
 
-                    top: 0;
                     .title{
                         text-shadow: 0px 0px 8px #00000000;
                         font-size: 2.2em;
 
                     }
                     .description{
+                        transition-property: opacity;
+                        transition-duration: .5s;
+                        transition-delay: .3s;
+                        opacity: 1;
+                    }
+                    .open_page{
+                        transition-property: opacity;
+                        transition-duration: .5s;
+                        transition-delay: .3s;
                         opacity: 1;
                     }
                 }
