@@ -7,6 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
+  skillsList = [
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    }
+  ]
   constructor() { }
 
   ngOnInit(): void {
