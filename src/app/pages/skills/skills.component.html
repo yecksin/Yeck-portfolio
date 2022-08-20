@@ -3,10 +3,20 @@
     <div class="choose">
         <div class="title">Choose a skill</div>
         <div class="skills_list">
-            <div class="skill" *ngFor="let item of skillsList">???</div>
+            <div class="skill" *ngFor="let skill of skills.all; let i=index" (click)="animateImageDetail(i)">
+                <img class="icon-img" [src]="skill.img" alt="" srcset="">
+                <div class="name">{{skill.name}}</div>
+                <div class="percentage" [style.width]="skill.percentage"><div class="value">{{skill.percentage}}</div></div>
+            </div>
         </div>
     </div>
     <div class="detail">
-        some
+        <div class="skill_detail animate__faster animate__animated">
+            <img class="icon-img animate__animated animate__bounce" *ngIf="skills.currentSkill.img"  [src]="skills.currentSkill.img" alt="" srcset="">
+            <div class="name">{{skills.currentSkill.name}}</div>
+            <div class="description">{{skills.currentSkill.description}}</div>
+            <div class="percentage" [style.width]="skills.currentSkill.percentage"><div class="description">knowledge level</div><div class="value">{{skills.currentSkill.percentage}}</div></div>
+        </div>
     </div>
 </div>
+

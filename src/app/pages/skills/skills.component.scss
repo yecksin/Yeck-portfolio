@@ -1,5 +1,6 @@
 .local_container{
-    background-image: url('https://images.unsplash.com/photo-1591109864300-46c417fa0475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80');
+    overflow: hidden;
+    background-image: url('https://images.unsplash.com/photo-1661010854524-b40635d127d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -7,10 +8,10 @@
     height: 100vh;
     padding: 0px;
     margin: 0px;
-    padding: 100px;
+    padding: 100px 15vw;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr minmax(0px, 550px);
     grid-gap: 100px;
     .choose{
         .title{
@@ -24,25 +25,107 @@
             flex-wrap: wrap;
             gap: 10px;
             .skill{
-                width: 150px;
-                height: 150px;
-                background-color: rgba(255, 255, 255, 0.13);
-                border: 1px solid rgba(255, 255, 255, 0.315);
-                border-radius: 2px;
+                overflow: hidden;
+                width: 130px;
+                height: 140px;
+                padding: 0px 5px;
+                box-sizing: border-box;
+                background: rgb(0,0,0);
+                background: linear-gradient(305deg, rgba(0,0,0,0.336) 0%, rgba(40,43,52,0.336) 100%);
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+                border-radius: 10px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 color: white;
                 transition: all ease-in-out .3s;
+                flex-direction: column;
+                box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.322);
+                gap: 15px;
+                cursor: pointer;
+                font-weight: 400;
+                font-size: .9em;
+                text-align: center;
+                position: relative;
+                .icon-img{
+                    width: 45px;
+                }
+                .percentage{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #347ed37c;
+                    border-radius: 0px 10px 10px 0px;
+                    height: 14px;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .value{
+                        font-size: .8em;
+                        font-weight: 400;
+                    }
+                }
                 &:hover{
-                    border: 1px solid rgba(255, 255, 255, 0.747);
-                    background-color: rgba(255, 255, 255, 0.267);
+                    background-color: rgba(48, 41, 41, 0.267);
                 }
             }
         }
     }
     .detail{
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .skill_detail{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            background: rgb(0,0,0);
+            background: linear-gradient(305deg, rgba(0,0,0,0.336) 0%, rgba(40,43,52,0.336) 100%);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.322);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 65px 100px 100px 100px;
+            text-align: center;
+            .icon-img{
+               margin-bottom: 30px;
+               width: 80px;
+            }
+            .name{
+                color: white;
+                font-size: 1.6em;
+            }
+            .description{
+                color: #ffffff9f;
+            }
+            .percentage{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: #347ed37c;
+                border-radius: 0px 10px 10px 0px;
+                height: 17px;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all ease .3s;
+                .value{
+                    font-size: .8em;
+                    font-weight: 400;
+                }
+                .description{
+                    position: absolute;
+                    top: -24px;
+                    font-style: italic;
+                    font-size: .8em;
+                }
+            }
+        }
     }
 
 }
