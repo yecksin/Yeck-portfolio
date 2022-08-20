@@ -6,25 +6,25 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
-  {
-    path:'about-me',
-    component: AboutMeComponent
-  },
+  // {
+  //   path:'about-me',
+  //   component: AboutMeComponent
+  // },
   {
     path:'skills',
     component: SkillsComponent
   },
-  {
-    path:'projects',
-    component: ProjectsComponent
-  },
-  {
-    path:'contact',
-    component: ContactComponent
-  },
+  // {
+  //   path:'projects',
+  //   component: ProjectsComponent
+  // },
+  // {
+  //   path:'contact',
+  //   component: ContactComponent
+  // },
   {
     path:'',
-    redirectTo:'about-me',
+    redirectTo:'skills',
     pathMatch:"full",
   }
 ];
