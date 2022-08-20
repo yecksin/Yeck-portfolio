@@ -1,6 +1,6 @@
 .local_container{
     overflow: hidden;
-    background-image: url('https://images.unsplash.com/photo-1661010854524-b40635d127d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-image: url('https://images.unsplash.com/photo-1572283046480-e990be92d301?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -14,6 +14,12 @@
     grid-template-columns: 1fr minmax(0px, 550px);
     grid-gap: 100px;
     .choose{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: -30px;
+
         .title{
             color: white;
             font-weight: 500px;
@@ -31,7 +37,7 @@
                 padding: 0px 5px;
                 box-sizing: border-box;
                 background: rgb(0,0,0);
-                background: linear-gradient(305deg, rgba(0,0,0,0.336) 0%, rgba(40,43,52,0.336) 100%);
+                background: linear-gradient(305deg, rgba(40,43,52,0.336) 0%, rgba(40,43,52,0.336) 100%);
                 -webkit-backdrop-filter: blur(10px);
                 backdrop-filter: blur(10px);
                 border-radius: 10px;
@@ -41,7 +47,6 @@
                 color: white;
                 transition: all ease-in-out .3s;
                 flex-direction: column;
-                box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.322);
                 gap: 15px;
                 cursor: pointer;
                 font-weight: 400;
@@ -91,6 +96,7 @@
             border-radius: 10px;
             padding: 65px 100px 100px 100px;
             text-align: center;
+            overflow: hidden;
             .icon-img{
                margin-bottom: 30px;
                width: 80px;
