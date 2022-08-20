@@ -8,11 +8,8 @@
     height: 100vh;
     padding: 0px;
     margin: 0px;
-    padding: 100px 15vw;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr minmax(0px, 550px);
-    grid-gap: 100px;
     .choose{
         display: flex;
         align-items: center;
@@ -30,6 +27,27 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            overflow-y: scroll;
+            max-height: 50vh;
+            /* width */
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #363636;
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+        
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
             .skill{
                 overflow: hidden;
                 width: 130px;
@@ -134,4 +152,39 @@
         }
     }
 
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .local_container{
+        grid-template-columns: 1fr minmax(0px, 550px);
+        padding: 10px 10px;
+        grid-gap: 10px;
+
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .local_container{
+        grid-template-columns: 1fr minmax(0px, 550px);
+        padding: 100px 15vw;
+        grid-gap: 50px;
+
+    }
 }
